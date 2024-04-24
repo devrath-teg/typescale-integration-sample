@@ -1,0 +1,1 @@
+# typescale-integration-sample
