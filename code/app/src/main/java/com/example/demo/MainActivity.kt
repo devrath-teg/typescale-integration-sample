@@ -207,7 +207,8 @@ class MainActivity : ComponentActivity() {
                             typeScaleValue = TypeScaleValue.TypeScale14,
                             scaleVariant = ScaleVariant.DisplayText,
                             modifier = Modifier.fillMaxWidth().background(color = Color(0xFF3700B3)),
-                            color = Color(0xFFFFFFFF)
+                            color = Color(0xFFFFFFFF),
+                            isBottomSpacingEnabled = true
                         )
                         Text(text = "<---------TypeScale14--------->")
                     }

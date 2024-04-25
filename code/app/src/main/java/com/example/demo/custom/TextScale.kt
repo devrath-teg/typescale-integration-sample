@@ -37,6 +37,7 @@ import com.example.demo.custom.TextScaleConstants.typeScale_6_displayText
 import com.example.demo.custom.TextScaleConstants.typeScale_7_displayText
 import com.example.demo.custom.TextScaleConstants.typeScale_8_displayText
 import com.example.demo.custom.TextScaleConstants.typeScale_9_displayText
+import com.example.demo.font.EconomistTopography
 
 /**
  * ************************************ How to use it ************************************
@@ -56,6 +57,7 @@ fun EconomistText(
     text: String,
     typeScaleValue: TypeScaleValue,
     scaleVariant: ScaleVariant,
+    isBottomSpacingEnabled: Boolean = true,
     // Optional
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
@@ -82,6 +84,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_1_bodyText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier,
                     color = color,
@@ -100,6 +103,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_2_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -114,6 +118,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_2_bodyText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -130,6 +135,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_3_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -144,6 +150,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_3_bodyText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -160,6 +167,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_4_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -174,6 +182,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_4_bodyText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -190,6 +199,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_5_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -204,6 +214,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_5_bodyText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -220,6 +231,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_6_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -234,6 +246,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_6_bodyText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -250,6 +263,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_7_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -270,6 +284,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_8_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -290,6 +305,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_9_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -310,6 +326,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_10_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -330,6 +347,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_11_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -350,6 +368,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_12_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -370,6 +389,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_13_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -390,6 +410,7 @@ fun EconomistText(
                 AppText(
                     // Compulsory
                     text = text, scaleOption = typeScale_14_displayText,
+                    isBottomSpacingEnabled = isBottomSpacingEnabled,
                     // Optional
                     modifier = modifier, color = color, fontStyle = fontStyle,
                     fontWeight = fontWeight, fontFamily = fontFamily,
@@ -435,6 +456,7 @@ private fun AppText(
     // Compulsory
     text: String,
     scaleOption: TypeScaleOption,
+    isBottomSpacingEnabled: Boolean = true,
     // Optional
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
@@ -456,7 +478,7 @@ private fun AppText(
         text = text,
         fontSize = scaleOption.size.sp,
         lineHeight = scaleOption.lineHeight.sp,
-        modifier = modifier.padding(bottom = scaleOption.paragraphSpacing.dp),
+        modifier = if(isBottomSpacingEnabled){ modifier.padding(bottom = scaleOption.paragraphSpacing.dp) }else{ modifier },
         // Optional
         color = color,
         fontStyle = fontStyle,
@@ -470,7 +492,8 @@ private fun AppText(
         maxLines = maxLines,
         minLines = minLines,
         onTextLayout = onTextLayout,
-        style = style
+        //style = style
+        style = EconomistTopography.primarySerifOsf.regular
     )
 }
 
