@@ -1,6 +1,11 @@
 package com.example.demo.custom
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,10 +49,13 @@ import com.example.demo.font.EconomistTopography
  *  Ticket: https://economist.atlassian.net/browse/MAWE-1161
  *  Note: scaleVariant can throw error if the variant does not exist
  *
+ *  isBottomSpacingEnabled is by default set to false, so set it to true if you want to add it
+ *
  *  EconomistText(
  *                text = "Economist Text",
  *                typeScaleValue = TypeScaleValue.TypeScale1,
  *                scaleVariant = ScaleVariant.DisplayText
+ *                isBottomSpacingEnabled = true
  *  )
  * ************************************ How to use it ************************************
  */
@@ -57,7 +65,7 @@ fun EconomistText(
     text: String,
     typeScaleValue: TypeScaleValue,
     scaleVariant: ScaleVariant,
-    isBottomSpacingEnabled: Boolean = true,
+    isBottomSpacingEnabled: Boolean = false,
     // Optional
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
@@ -456,7 +464,7 @@ private fun AppText(
     // Compulsory
     text: String,
     scaleOption: TypeScaleOption,
-    isBottomSpacingEnabled: Boolean = true,
+    isBottomSpacingEnabled: Boolean = false,
     // Optional
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
@@ -473,28 +481,65 @@ private fun AppText(
     onTextLayout: (TextLayoutResult) -> Unit = {},
     style: TextStyle = LocalTextStyle.current,
 ) {
-    Text(
-        // Compulsory
-        text = text,
-        fontSize = scaleOption.size.sp,
-        lineHeight = scaleOption.lineHeight.sp,
-        modifier = if(isBottomSpacingEnabled){ modifier.padding(bottom = scaleOption.paragraphSpacing.dp) }else{ modifier },
-        // Optional
-        color = color,
-        fontStyle = fontStyle,
-        fontWeight = fontWeight,
-        fontFamily = fontFamily,
-        letterSpacing = letterSpacing,
-        textDecoration = textDecoration,
-        textAlign = textAlign,
-        overflow = overflow,
-        softWrap = softWrap,
-        maxLines = maxLines,
-        minLines = minLines,
-        onTextLayout = onTextLayout,
-        //style = style
-        style = EconomistTopography.primarySerifOsf.regular
-    )
+    /**
+     * If the bottom spacing is enabled ---> Add the spacing composable else do not add it
+     */
+    if(isBottomSpacingEnabled){
+        // Add bottom spacing
+        Column(
+            modifier = modifier.wrapContentSize()
+        ) {
+            Text(
+                // Compulsory
+                text = text,
+                fontSize = scaleOption.size.sp,
+                lineHeight = scaleOption.lineHeight.sp,
+                modifier = modifier,
+                // Optional
+                color = color,
+                fontStyle = fontStyle,
+                fontWeight = fontWeight,
+                fontFamily = fontFamily,
+                letterSpacing = letterSpacing,
+                textDecoration = textDecoration,
+                textAlign = textAlign,
+                overflow = overflow,
+                softWrap = softWrap,
+                maxLines = maxLines,
+                minLines = minLines,
+                onTextLayout = onTextLayout,
+                //style = style
+                style = EconomistTopography.primarySerifOsf.regular
+            )
+            Spacer(
+                modifier = modifier.background(Color.Transparent).height(scaleOption.paragraphSpacing.dp)
+            )
+        }
+    }else{
+        // Do not add bottom spacing
+        Text(
+            // Compulsory
+            text = text,
+            fontSize = scaleOption.size.sp,
+            lineHeight = scaleOption.lineHeight.sp,
+            modifier = modifier,
+            // Optional
+            color = color,
+            fontStyle = fontStyle,
+            fontWeight = fontWeight,
+            fontFamily = fontFamily,
+            letterSpacing = letterSpacing,
+            textDecoration = textDecoration,
+            textAlign = textAlign,
+            overflow = overflow,
+            softWrap = softWrap,
+            maxLines = maxLines,
+            minLines = minLines,
+            onTextLayout = onTextLayout,
+            //style = style
+            style = EconomistTopography.primarySerifOsf.regular
+        )
+    }
 }
 
 data class TypeScaleOption(
