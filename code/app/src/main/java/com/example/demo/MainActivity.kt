@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.example.demo.custom.EconomistText
 import com.example.demo.custom.ScaleVariant
 import com.example.demo.custom.TypeScaleValue
+import com.example.demo.font.SampleText
 import com.example.demo.ui.theme.DemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -49,20 +50,10 @@ class MainActivity : ComponentActivity() {
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
-            Text(text = "<---------TypeScale8--------->")
+            //Text(text = "<---------TypeScale4--------->")
             EconomistText(
-                text = "DisplayText",
-                typeScaleValue = TypeScaleValue.TypeScale8,
-                scaleVariant = ScaleVariant.DisplayText,
-                modifier = Modifier
-                    .background(color = Color(0xFF3700B3)),
-                color = Color(0xFFFFFFFF)
-            )
-            Spacer(modifier = Modifier.fillMaxWidth().height(30.dp))
-
-            EconomistText(
-                text = "DisplayText",
-                typeScaleValue = TypeScaleValue.TypeScale8,
+                text = SampleText.withParagraph,
+                typeScaleValue = TypeScaleValue.TypeScale4,
                 scaleVariant = ScaleVariant.DisplayText,
                 isBottomSpacingEnabled = true,
                 modifier = Modifier
@@ -70,7 +61,7 @@ class MainActivity : ComponentActivity() {
                     .background(color = Color(0xFF3700B3)),
                 color = Color(0xFFFFFFFF)
             )
-            Text(text = "<---------TypeScale8--------->")
+           //Text(text = "<---------TypeScale4--------->")
         }
     }
 
