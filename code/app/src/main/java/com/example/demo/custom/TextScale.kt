@@ -487,7 +487,7 @@ private fun AppText(
     if(isBottomSpacingEnabled){
         // Add bottom spacing
         Column(
-            modifier = modifier.wrapContentSize()
+            modifier = Modifier.wrapContentSize()
         ) {
             Text(
                 // Compulsory
